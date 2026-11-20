@@ -29,7 +29,6 @@ const MIDDLE_SENTENCES: &[&str] = &[
 	"%N was desperately trying to %A.",
 	"%N was thinking of %C.",
 	"%N was clearly thinking of %C.",
-	"%N decided to get %N involved.",
 	"%N broke down the door and rushed in.",
 	"%P thought it would be fun.",
 	"%P thought it would be funny.",
@@ -68,6 +67,8 @@ const ACTIONS: &[&str] = &[
 	"%A without %C",
 	"%A in order to %A",
 	"%A so that %N could %A",
+	"%A (as a joke of course)",
+	"%A at %N's house",
 	"save %N from %N",
 	"save %N's life",
 	"give %N over to %N",
@@ -94,6 +95,7 @@ const ACTIONS: &[&str] = &[
 	"eat %N's pizza",
 	"kidnap %N",
 	"steal a car",
+	"steal %N's car",
 	"throw a knife at %N",
 ];
 
@@ -107,6 +109,8 @@ const CURRENT_ACTIONS: &[&str] = &[
 	"%C without %C",
 	"%C in order to %A",
 	"%C so that %N could %A",
+	"%C (as a joke of course)",
+	"%C at %N's house",
 	"saving %N from %N",
 	"giving %N over to %N",
 	"throwing a party",
@@ -131,6 +135,7 @@ const CURRENT_ACTIONS: &[&str] = &[
 	"eating %N's pizza",
 	"kidnapping %N",
 	"stealing a car",
+	"stealing %N's car",
 	"throwing a knife at %N",
 ];
 
@@ -154,12 +159,17 @@ const NAMES: &[(&str, G)] = &[
 	("the police", G::M),
 	("the firemen", G::M),
 	("the IRS", G::M),
+	("the government", G::M),
+	("the president", G::M),
 	("the dog", G::M),
 	("a dog", G::M),
 	("a random dog", G::M),
 	("a cow", G::M),
 	("a group of children", G::M),
 	("a random stranger", G::M),
+	("%N's mom", G::F),
+	("%N's dad", G::M),
+	("a rubber duck", G::M),
 ];
 
 // genders
